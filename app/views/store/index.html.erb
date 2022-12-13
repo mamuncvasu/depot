@@ -1,18 +1,23 @@
 <% if notice %>
-<aside id="notice"><%= notice %></aside>
+  <aside id="notice"><%= notice %></aside>
 <% end %>
-<h1>Your Pragmatic Catalog</h1>
-<ul class="catalog">
-<% @products.each do |product| %>
-<li>
-<%= image_tag(product.image_url) %>
-<h2><%= product.title %></h2>
-<p>
-<%= sanitize(product.description) %>
-</p>
-<div class="price">
-<%= product.price %>
+
+<div class="w-full">
+    <h1 class="text-center text-4xl text-bold underline py-5">Your Pragmatic Catalog</h1>
+     <% @products.each do |product| %>
+      <div id="products" class="grid grid-cols-4 gap-4 py-5">
+          <%= image_tag(product.image_url, size: "90x90") %>
+          <h2>
+              <%= product.title %>
+          </h2>
+          <p>
+              <%= truncate(strip_tags(product.description), length: 80) %>
+          </p>
+          <div class="price px-5">
+              <%= number_to_currency(product.price) %>
+          </div>
+
+      </div>
+    <% end %>
+
 </div>
-</li>
-<% end %>
-</ul>
