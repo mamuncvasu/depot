@@ -1,18 +1,18 @@
-<div class="grid grid-cols-4 gap-4">
-  <div>
-    Mauris viverra, arcu sed facilisis semper, lacus tellus pellentesque lorem, a accumsan augue nulla vitae libero. Morbi sit amet commodo tortor, et consectetur lectus. Aenean porttitor, sem a efficitur sodales, mauris arcu scelerisque nunc, at commodo nulla orci ac augue. Vestibulum aliquet congue faucibus. Ut euismod luctus libero, vel aliquam dui convallis quis. Ut faucibus tempor commodo. Aenean nibh diam, hendrerit ac purus ac, suscipit rhoncus massa. Nunc sed velit finibus, commodo ante in, sollicitudin dolor. Fusce faucibus mauris non enim maximus, quis sagittis erat finibus. Morbi sit amet magna at libero viverra tincidunt vitae vel dui. Nulla facilisi. Duis sapien tortor, faucibus id ornare vitae, lacinia ut sapien. Mauris et porta augue. Nullam molestie euismod quam vitae cursus. Suspendisse enim mauris, sodales vitae eros et, eleifend convallis dui.
-  </div>
-  <div>
-    Mauris viverra, arcu sed facilisis semper, lacus tellus pellentesque lorem, a accumsan augue nulla vitae libero. Morbi sit amet commodo tortor, et consectetur lectus. Aenean porttitor, sem a efficitur sodales, mauris arcu scelerisque nunc, at commodo nulla orci ac augue. Vestibulum aliquet congue faucibus. Ut euismod luctus libero, vel aliquam dui convallis quis. Ut faucibus tempor commodo. Aenean nibh diam, hendrerit ac purus ac, suscipit rhoncus massa. Nunc sed velit finibus, commodo ante in, sollicitudin dolor. Fusce faucibus mauris non enim maximus, quis sagittis erat finibus. Morbi sit amet magna at libero viverra tincidunt vitae vel dui. Nulla facilisi. Duis sapien tortor, faucibus id ornare vitae, lacinia ut sapien. Mauris et porta augue. Nullam molestie euismod quam vitae cursus. Suspendisse enim mauris, sodales vitae eros et, eleifend convallis dui.
-  </div>
-  <div>
-  Mauris viverra, arcu sed facilisis semper, lacus tellus pellentesque lorem, a accumsan augue nulla vitae libero. Morbi sit amet commodo tortor, et consectetur lectus. Aenean porttitor, sem a efficitur sodales, mauris arcu scelerisque nunc, at commodo nulla orci ac augue. Vestibulum aliquet congue faucibus. Ut euismod luctus libero, vel aliquam dui convallis quis. Ut faucibus tempor commodo. Aenean nibh diam, hendrerit ac purus ac, suscipit rhoncus massa. Nunc sed velit finibus, commodo ante in, sollicitudin dolor. Fusce faucibus mauris non enim maximus, quis sagittis erat finibus. Morbi sit amet magna at libero viverra tincidunt vitae vel dui. Nulla facilisi. Duis sapien tortor, faucibus id ornare vitae, lacinia ut sapien. Mauris et porta augue. Nullam molestie euismod quam vitae cursus. Suspendisse enim mauris, sodales vitae eros et, eleifend convallis dui.
+<% if notice %>
+<aside id="notice"><%= notice %></aside>
+<% end %>
+<h1>Your Pragmatic Catalog</h1>
+<ul class="catalog">
+<% @products.each do |product| %>
+<li>
+<%= image_tag(product.image_url) %>
+<h2><%= product.title %></h2>
+<p>
+<%= sanitize(product.description) %>
+</p>
+<div class="price">
+<%= product.price %>
 </div>
-  <div>
- Mauris viverra, arcu sed facilisis semper, lacus tellus pellentesque lorem, a accumsan augue nulla vitae libero. Morbi sit amet commodo tortor, et consectetur lectus. Aenean porttitor, sem a efficitur sodales, mauris arcu scelerisque nunc, at commodo nulla orci ac augue. Vestibulum aliquet congue faucibus. Ut euismod luctus libero, vel aliquam dui convallis quis. Ut faucibus tempor commodo. Aenean nibh diam, hendrerit ac purus ac, suscipit rhoncus massa. Nunc sed velit finibus, commodo ante in, sollicitudin dolor. Fusce faucibus mauris non enim maximus, quis sagittis erat finibus. Morbi sit amet magna at libero viverra tincidunt vitae vel dui. Nulla facilisi. Duis sapien tortor, faucibus id ornare vitae, lacinia ut sapien. Mauris et porta augue. Nullam molestie euismod quam vitae cursus. Suspendisse enim mauris, sodales vitae eros et, eleifend convallis dui.
-</div>
-  <div>
-Mauris viverra, arcu sed facilisis semper, lacus tellus pellentesque lorem, a accumsan augue nulla vitae libero. Morbi sit amet commodo tortor, et consectetur lectus. Aenean porttitor, sem a efficitur sodales, mauris arcu scelerisque nunc, at commodo nulla orci ac augue. Vestibulum aliquet congue faucibus. Ut euismod luctus libero, vel aliquam dui convallis quis. Ut faucibus tempor commodo. Aenean nibh diam, hendrerit ac purus ac, suscipit rhoncus massa. Nunc sed velit finibus, commodo ante in, sollicitudin dolor. Fusce faucibus mauris non enim maximus, quis sagittis erat finibus. Morbi sit amet magna at libero viverra tincidunt vitae vel dui. Nulla facilisi. Duis sapien tortor, faucibus id ornare vitae, lacinia ut sapien. Mauris et porta augue. Nullam molestie euismod quam vitae cursus. Suspendisse enim mauris, sodales vitae eros et, eleifend convallis dui.
-  </div>
-
-</div>
+</li>
+<% end %>
+</ul>
