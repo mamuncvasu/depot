@@ -4,7 +4,15 @@
       <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
     <% end %>
 
-    <%= render @line_item %>
+    <%#= render @line_item %>
+
+    <h2>Your Pragmatic Cart</h2>
+    <ul>
+      <%@cart.line_items.each do |item| %>
+          <%= item.product.title %>
+      <% end %>
+    </ul>
+
 
     <%= link_to 'Edit this line_item', edit_line_item_path(@line_item), class: "mt-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
     <div class="inline-block ml-2">

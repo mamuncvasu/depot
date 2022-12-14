@@ -15,7 +15,7 @@
           </p>
           <div class="price px-5">
               <%= number_to_currency(product.price) %>
-              <%= link_to "Add to cart", line_items_path(product_id: product),
+              <%= button_to "Add to cart", line_items_path(product_id: product),
               class: "items-center box-border px-5 py-3 rounded-full bg-green-600 " %>
           </div>
 
